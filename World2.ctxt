@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=a\ x\ y
+comment0.target=World2(int,\ int,\ int)
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ prepare()
+numComments=3
