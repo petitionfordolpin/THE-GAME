@@ -19,7 +19,6 @@ public class Text extends Actor
         beta = alpha;
         size = size1;
         color1 = color11;
-
     }
 
     public void setColor1(java.awt.Color color)

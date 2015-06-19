@@ -18,7 +18,6 @@ public class World2 extends World
     {
         if(!main.checkTree()) {
             setPaintOrder(new Class[] {Main1.class, Tree.class});
-
         } else {
             setPaintOrder(new Class[] {Tree.class, Main1.class});
         }
