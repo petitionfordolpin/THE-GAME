@@ -1,12 +1,10 @@
 import greenfoot.*;
 
-public class World2 extends World
-{
+public class World2 extends World {
     private Main1 main;
     private int b;
 
-    public World2(int a, int x, int y)
-    {
+    public World2(int a, int x, int y) {
         super(15, 10, 40);
         b = a;
         main = new Main1(1, a);
@@ -14,8 +12,7 @@ public class World2 extends World
         prepare();
     }
 
-    public void act()
-    {
+    public void act() {
         if(!main.checkTree()) {
             setPaintOrder(new Class[] {Main1.class, Tree.class});
         } else {
@@ -23,8 +20,7 @@ public class World2 extends World
         }
     }
 
-    private void prepare()
-    {
+    private void prepare() {
         Tree tree = new Tree();
         addObject(tree, 14, 3);
         Tree tree2 = new Tree();

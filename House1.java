@@ -1,46 +1,29 @@
 import greenfoot.*;
 
-/**
- * Write a description of class House1 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class House1 extends World
-{
+public class House1 extends World {
     private Main1 main;
     private int b;
     private int return1;
     private int return2;
 
-    public House1(int a, int x, int y, int w, int z)
-    {
+    public House1(int a, int x, int y, int w, int z) {
         super(11, 6, 40);
         b = a;
         return1 = w;
         return2 = z;
         main = new Main1(11, b);
         addObject(main, x, y);
-
         prepare();
     }
 
-    public void act()
-    {
-        if(main.getX() == 5 && main.getY() == 5)
-        {
+    public void act() {
+        if(main.getX() == 5 && main.getY() == 5) {
             World level = new World4(b, return1, return2);
             Greenfoot.setWorld(level);
         }
     }
 
-
-    /**
-     * Prepare the world for the start of the program. That is: create the initial
-     * objects and add them to the world.
-     */
-    private void prepare()
-    {
+    private void prepare() {
         Barrier barrier = new Barrier();
         addObject(barrier, 2, 3);
         Barrier barrier2 = new Barrier();
