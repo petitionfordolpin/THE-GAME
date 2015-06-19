@@ -11,6 +11,7 @@ public class World1 extends World
     public World1()
     {
         super(600, 400, 1);
+        
         prepare();
     }
 

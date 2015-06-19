@@ -20,6 +20,10 @@ public class House11 extends Actor
         {
             setImage("House4.png");
         }
+        if(x == 5)
+        {
+            setImage("Theship.png");
+        }
     }
 
     public void act()

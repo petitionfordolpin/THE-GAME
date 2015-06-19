@@ -141,5 +141,15 @@ public class Main1 extends Actor
             World level2 = new World2(character, 7, 9);
             Greenfoot.setWorld(level2);
         }
+        if(Greenfoot.isKeyDown("d") && getX() == 14 && getY() == 1 && world == 2)
+        {
+            World level2 = new World5(character, 0, 1);
+            Greenfoot.setWorld(level2);
+        }
+        if(Greenfoot.isKeyDown("a") && getX() == 0 && getY() == 1 && world == 4)
+        {
+            World level2 = new World3(character, 14, 1);
+            Greenfoot.setWorld(level2);
+        }
     }
 }
