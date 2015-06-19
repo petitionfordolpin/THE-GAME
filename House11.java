@@ -27,12 +27,12 @@ public class House11 extends Actor {
     }
 
     public boolean foundMain1() {
-         if(x == 1 || x == 2)
-             return(getOneObjectAtOffset(0, +1, Main1.class) != null);
-         if(x == 3)
-             return(getOneObjectAtOffset(-1, +1, Main1.class) != null);
-         if(x == 4)
-             return(getOneObjectAtOffset(+1, +1, Main1.class) != null);
-         return(getOneObjectAtOffset(+1, +1, Main1.class) != null);
-        }
+        if(x == 1 || x == 2)
+            return(getOneObjectAtOffset(0, +1, Main1.class) != null);
+        if(x == 3)
+            return(getOneObjectAtOffset(-1, +1, Main1.class) != null);
+        if(x == 4)
+            return(getOneObjectAtOffset(+1, +1, Main1.class) != null);
+        return(getOneObjectAtOffset(+1, +1, Main1.class) != null);
+    }
 }
