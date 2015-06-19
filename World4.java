@@ -1,50 +1,65 @@
 import greenfoot.*;
 
+/**
+ * Write a description of class World4 here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
 public class World4 extends World
 {
-    private Mage mage;
-    private Warrior warrior;
+    private Main1 main;
+    
     private int b;
-
+    /**
+     * Constructor for objects of class World3.
+     * 
+     */
     public World4(int a, int x, int y)
-    {
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(15, 10, 40);
         b = a;
-        if(a == 1)
-        {
-            mage = new Mage(3);
-            addObject(mage, x,y);
-        }
-        if(a == 2)
-        {
-            warrior = new Warrior(3);
-            addObject(warrior, x,y);
-        }
+        main = new Main1(3,a);
+        addObject(main, x,y);
 
         prepare();
     }
 
+    /**
+     * Constructor for objects of class World4.
+     * 
+     */
     public World4()
-    {
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
     }
 
+    /**
+     * Prepare the world for the start of the program. That is: create the initial
+     * objects and add them to the world.
+     */
     private void prepare()
     {
-        House1 house1 = new House1();
+        House11 house1 = new House11(1);
         addObject(house1, 12, 5);
-        House2 house2 = new House2();
-        addObject(house2, 12, 1);
-        House3 house3 = new House3();
-        addObject(house3, 2, 1);
-        removeObject(house3);
-        House3 house32 = new House3();
+        
+        
+        
+        
+        
+        House11 house32 = new House11(3);
         addObject(house32, 3, 1);
-        House4 house4 = new House4();
+        
+        House11 house4 = new House11(4);
         addObject(house4, 11, 1);
-        removeObject(house2);
-        House2 house22 = new House2();
+        
+        
+        
+        House11 house22 = new House11(2);
         addObject(house22, 2, 5);
+        
         Barrier barrier = new Barrier();
         addObject(barrier, 11, 6);
         Barrier barrier2 = new Barrier();

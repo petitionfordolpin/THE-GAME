@@ -1,43 +1,52 @@
 import greenfoot.*;
 
+/**
+ * Write a description of class World2 here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
 public class World2 extends World
 {
-    private Mage mage;
-    private Warrior warrior;
+    private Main1 main;
+    
     private int b;
-
+    /**
+     * Constructor for objects of class World2.
+     * 
+     */
     public World2(int a, int x, int y)
-    {
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(15, 10, 40);
         b = a;
-        if(a == 1)
-        {
-            mage = new Mage(1);
-            addObject(mage, x,y);
-        }
-        if(a == 2)
-        {
-            warrior = new Warrior(1);
-            addObject(warrior, x,y);
-        }
+        
+        main = new Main1(1,a);
+        addObject(main, x,y);
+        
+        
 
         prepare();
     }
 
     public void act()
     {
-        if(b == 1 && !mage.checkTree())
-            setPaintOrder(new Class[] {Mage.class, Tree.class});
+       if(!main.checkTree())
+           setPaintOrder(new Class[] {Main1.class, Tree.class});
         else
-            setPaintOrder(new Class[] {Tree.class, Mage.class});
-        if(b == 2 && !warrior.checkTree())
-            setPaintOrder(new Class[] {Warrior.class, Tree.class});
-        else
-            setPaintOrder(new Class[] {Tree.class, Warrior.class});     
+            setPaintOrder(new Class[] {Tree.class, Main1.class});
+         
     }
-
+    
+    
+    
+    /**
+     * Prepare the world for the start of the program. That is: create the initial
+     * objects and add them to the world.
+     */
     private void prepare()
     {
+
         Tree tree = new Tree();
         addObject(tree, 14, 3);
         Tree tree2 = new Tree();
@@ -74,49 +83,49 @@ public class World2 extends World
         addObject(tree15, 1, 8);
         Tree tree16 = new Tree();
         addObject(tree16, 1, 2);
-
+        
         Barrier barrier2 = new Barrier();
         addObject(barrier2, 12, 8);
-
+        
         Barrier barrier4 = new Barrier();
         addObject(barrier4, 13, 6);
-
+        
         Barrier barrier6 = new Barrier();
         addObject(barrier6, 14, 3);
-
+        
         Barrier barrier8 = new Barrier();
         addObject(barrier8, 11, 2);
-
+        
         Barrier barrier10 = new Barrier();
         addObject(barrier10, 10, 7);
-
+        
         Barrier barrier12 = new Barrier();
         addObject(barrier12, 10, 3);
-
+        
         Barrier barrier14 = new Barrier();
         addObject(barrier14, 8, 2);
-
+        
         Barrier barrier16 = new Barrier();
         addObject(barrier16, 8, 6);
-
+        
         Barrier barrier18 = new Barrier();
         addObject(barrier18, 5, 2);
-
+        
         Barrier barrier20 = new Barrier();
         addObject(barrier20, 4, 3);
-
+        
         Barrier barrier22 = new Barrier();
         addObject(barrier22, 5, 7);
-
+        
         Barrier barrier24 = new Barrier();
         addObject(barrier24, 3, 6);
-
+        
         Barrier barrier26 = new Barrier();
         addObject(barrier26, 1, 8);
-
+        
         Barrier barrier28 = new Barrier();
         addObject(barrier28, 1, 5);
-
+        
         Barrier barrier30 = new Barrier();
         addObject(barrier30, 1, 2);
     }
