@@ -4,7 +4,10 @@ public class World4 extends World
 {
     private Main1 main;
     private int b;
-
+    private House11 house1;
+    private House11 house2;
+    private House11 house3;
+    private House11 house4;
     public World4(int a, int x, int y)
     {
         super(15, 10, 40);
@@ -18,19 +21,24 @@ public class World4 extends World
     {
         super(600, 400, 1);
     }
-
+    
+    public void act()
+    {
+        checkHouse();
+    }
+    
     private void prepare()
     {
-        House11 house1 = new House11(1);
+        house1 = new House11(1);
         addObject(house1, 12, 5);
-        House11 house32 = new House11(3);
-        addObject(house32, 3, 1);
+        house3 = new House11(3);
+        addObject(house3, 3, 1);
 
-        House11 house4 = new House11(4);
+        house4 = new House11(4);
         addObject(house4, 11, 1);
 
-        House11 house22 = new House11(2);
-        addObject(house22, 2, 5);
+        house2 = new House11(2);
+        addObject(house2, 2, 5);
 
         Barrier barrier = new Barrier();
         addObject(barrier, 11, 6);
@@ -72,5 +80,43 @@ public class World4 extends World
         addObject(barrier19, 3, 5);
         Barrier barrier20 = new Barrier();
         addObject(barrier20, 3, 6);
+    }
+    
+    public void checkHouse()
+    {
+        for(int p = 1; p < 5; p++)
+        {
+            if(foundMain2(p))
+            {
+                World level = new House1(getB(), 5,4, main.getX(), main.getY()+1);
+                Greenfoot.setWorld(level);
+            }
+        }
+    }
+    
+    public boolean foundMain2(int a)
+    {
+        if(a == 1)
+        {
+            return(house1.foundMain1());
+        }
+        if(a == 2)
+        {
+            return(house2.foundMain1());
+        }
+        if(a == 3)
+        {
+            return(house3.foundMain1());
+        }
+        if(a == 4)
+        {
+            return(house4.foundMain1());
+        }
+        return(false);
+    }
+    
+    public int getB()
+    {
+        return(b);
     }
 }
