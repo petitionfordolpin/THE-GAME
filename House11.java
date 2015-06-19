@@ -1,11 +1,5 @@
 import greenfoot.*;
 
-/**
- * Write a description of class House11 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class House11 extends Actor
 {
     public House11(int x)
@@ -27,12 +21,9 @@ public class House11 extends Actor
             setImage("House4.png");
         }
     }
-    /**
-     * Act - do whatever the House11 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+
+    public void act()
     {
-        // Add your action code here.
-    }    
+        // Nothing.
+    }
 }
