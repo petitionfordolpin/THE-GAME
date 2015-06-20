@@ -1,19 +1,23 @@
 import greenfoot.*;
 
-public class GameStart extends Cutscene {
+public class GameStart extends Level {
     private Character exampleMage;
     private Character exampleWarrior;
     
-    private static final int ROTATE_DELAY = 25;
+    private static final int ROTATE_DELAY = 30;
 
     public GameStart() {
         super();
-        setBackground("grasss.png");
-        showText("Press W to choose Warrior, Press M to choose Mage", 300, 150);
+        setBackground("GameStart.png");
+        showText("Press W to choose Warrior, Press M to choose Mage", 7, 2);
+        addObjects();
+    }
+    
+    public void addObjects() {
         exampleMage = new Mage("Front", false);
-        addObject(exampleMage, 200, 275);
+        addObject(exampleMage, 4, 5);
         exampleWarrior = new Warrior("Front", false);
-        addObject(exampleWarrior, 400, 275);
+        addObject(exampleWarrior, 10, 5);
     }
 
     public void act() {

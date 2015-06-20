@@ -4,7 +4,7 @@ public abstract class Character extends Actor {
     private String direction;
     private boolean canMove;
 
-    private static final int INCREMENT = 5;
+    private static final int INCREMENT = 1;
     private static final int DELAY = 5;
 
     public Character(String direction, boolean canMove) {
